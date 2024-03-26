@@ -9,7 +9,7 @@ This repository is the PyTorch implementation of the paper:
 
 [**Prompting Hard or Hardly Prompting: Prompt Inversion for Text-to-Image Diffusion Models (CVPR 2024)**](https://arxiv.org/abs/2312.12416)
 
-[Shweta Mahajan](https://s-mahajan.github.io/), [Tanzila Rahman](https://sites.google.com/view/tanzila-rahman/home), [Kwang Moo Yi](https://www.cs.ubc.ca/~kmyi/), [Leonid Sigal] https://www.cs.ubc.ca/~lsigal/)
+[Shweta Mahajan](https://s-mahajan.github.io/), [Tanzila Rahman](https://sites.google.com/view/tanzila-rahman/home), [Kwang Moo Yi](https://www.cs.ubc.ca/~kmyi/), [Leonid Sigal] (https://www.cs.ubc.ca/~lsigal/)
 
 
 ## Requirements
