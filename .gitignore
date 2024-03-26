@@ -1,0 +1,13 @@
+# Ignore temporary files
+*~
+*.swp
+*.swo
+*.bak
+*.log
+*.tmp
+*.temp
+._*.png
+._*.py
+**/._*.png
+**/._*.py
+
