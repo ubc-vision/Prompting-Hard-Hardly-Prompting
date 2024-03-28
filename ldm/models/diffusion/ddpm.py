@@ -398,7 +398,6 @@ class DDPM(pl.LightningModule):
 
     def on_train_batch_end(self, *args, **kwargs):
         if self.current_epoch%1==0:
-            start_time = time.time()
             with open('logs_forward_pass/prompt_file.txt','a') as f:
                 prompt_l = self.cond_stage_model.transformer.text_model.embeddings.textual_embedding.sentence
                 decoded_text = " ".join(prompt_l)
@@ -409,9 +408,6 @@ class DDPM(pl.LightningModule):
                 decoded_text=decoded_text.replace(" .","")
                 decoded_text=decoded_text.strip()
                 print(decoded_text,file=f)
-            end_time = time.time()
-            execution_time = end_time - start_time
-            print("Execution time on_train_batch_end:", execution_time, "seconds")
             #print(self.cond_stage_model.transformer.token_emb_opt.sentence,file=f)
         #if self.use_ema:
         #    self.model_ema(self.model)
