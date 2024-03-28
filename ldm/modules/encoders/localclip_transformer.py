@@ -289,7 +289,6 @@ class LocalCustomTokenEmbedding(CLIPTextEmbeddings):
     def fast_projection(self):
         embed = self.textual_inv_embedding.clone().detach().cpu().numpy()
         self.sentence = []
-        start_time = time.time()
         for i in range(len(embed[0])):
             w = embed[0, i]
             embeddings = np.array(list(self.word_to_embeddings.values()))
@@ -300,9 +299,6 @@ class LocalCustomTokenEmbedding(CLIPTextEmbeddings):
             word_at_idx = list(self.word_to_embeddings.keys())[min_distance_index]
             self.projected_textual_inv_embedding[0,i] = torch.from_numpy(embeddings[min_distance_index])
             self.sentence.append(word_at_idx)
-        end_time = time.time()
-        execution_time = end_time - start_time
-        print("Execution time fast_projection:", execution_time, "seconds")
        
 
     def forward(self):
